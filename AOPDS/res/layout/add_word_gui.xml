@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android" 
+  android:layout_width="match_parent" 
+  android:layout_height="match_parent"
+  android:background="@drawable/bgbook"
+  android:paddingTop="5dip"
+  android:paddingRight="10dip"
+  android:paddingLeft="10dip"
+  android:paddingBottom="10dip"
+  android:orientation="vertical">
+  
+    
+  <TextView 
+		android:layout_width="match_parent" 
+		android:text="@string/LABEL_NEW_WORD" 
+		android:textSize="25sp"
+		android:textColor="#ffffff"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal" 
+		android:id="@+id/AddWordNewWordTextView">
+	</TextView> 
+	 
+  <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+			    
+			    <LinearLayout 
+			        android:id="@+id/addWordLinearLayout2" 
+			        android:layout_width="match_parent" 
+			        android:layout_height="wrap_content"
+			        android:paddingTop="20dip"
+  					android:paddingRight="20dip"
+  					android:paddingLeft="20dip"
+			        android:orientation="vertical"
+			        >
+			        
+			        <LinearLayout 
+			            android:orientation="horizontal"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            >
+			            
+			            <TextView 
+			            	android:layout_width="wrap_content" 
+			            	android:layout_height="wrap_content" 
+			            	android:text="@string/LABEL_WORD"
+			            	android:textColor="#000000"
+			            	android:id="@+id/AddWordWordTextView">
+			        	</TextView>
+			        	
+			            <TextView 
+			            	android:layout_width="wrap_content" 
+			            	android:layout_height="wrap_content" 
+			            	android:text=""
+			            	android:textColor="#000000"
+			            	android:id="@+id/AddWordLanguageTextView">
+			        	</TextView>
+			        	
+			        </LinearLayout>
+
+			        <EditText 
+			            android:inputType="text"
+			            android:layout_height="wrap_content" 
+			            android:layout_width="match_parent" 
+			            android:id="@+id/AddWordNewWordEditText">
+			        </EditText>
+			    </LinearLayout>
+			    
+			    <LinearLayout 
+			        android:layout_height="wrap_content" 
+			        android:id="@+id/addWordLinearLayout1" 
+			        android:layout_width="match_parent" 
+			        android:paddingTop="10dip"
+            		android:paddingRight="15dip"
+            		android:paddingLeft="15dip"
+            		android:paddingBottom="15dip"
+			        android:orientation="vertical">
+			        
+			        <LinearLayout 
+			            android:orientation="horizontal"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            >
+			            
+			            <TextView 
+			            	android:layout_height="wrap_content" 
+			            	android:layout_width="wrap_content" 
+			            	android:text="@string/LABEL_TRANSLATION" 
+			           	 	android:textColor="#000000" 
+			            	android:id="@+id/AddWordNewEntryTextView">
+			        	</TextView>
+			        	
+			            <TextView 
+			            	android:layout_width="wrap_content" 
+			            	android:layout_height="wrap_content" 
+			            	android:text=""
+			            	android:textColor="#000000"
+			            	android:id="@+id/AddWordNewEntryLanguageTextView">
+			        	</TextView>
+			        	
+			        </LinearLayout>
+			        
+			        <EditText 
+			            android:layout_width="match_parent" 
+			            android:layout_height="wrap_content" 
+			            android:inputType="text"
+			            android:id="@+id/AddWordNewEntryEditText">
+			        </EditText>
+			    </LinearLayout>
+			    
+			    <Button 
+			        android:layout_height="wrap_content" 
+			        android:layout_width="match_parent" 
+			        android:text="@string/LABEL_OK" 
+			        android:layout_marginLeft="37dip"
+			        android:layout_marginRight="37dip"
+			        android:layout_marginTop="15dip"
+			        android:id="@+id/AddWordOkButton">
+			    </Button>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

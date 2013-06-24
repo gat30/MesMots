@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest 
+    android:versionCode="1" 
+    android:versionName="1.0"
+    package="com.aopds" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="13"/>
+    
+    <application 
+        android:allowBackup="true"
+        android:icon="@drawable/icon" 
+        android:label="@string/app_name" 
+        android:theme="@style/AOPDSTheme">
+        <activity android:label="@string/app_name" android:name=".AopdsLauncher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name=".SignUpActivity"/>
+        <activity android:name=".SearchWordActivity" android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name=".SeeWordActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".PreferencesActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".DictionariesActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".DictionaryUpdateActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".UserLogInActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".AddWordActivity" android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name=".ModifyWordActivity" android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name=".AccountActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".SynchronizeActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".DictionaryManagementActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".CreateDictionaryActivity" android:windowSoftInputMode="adjustPan"/>
+    </application>
+</manifest>

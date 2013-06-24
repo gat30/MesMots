@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@drawable/bgbook"
+	android:orientation="vertical" 
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" 
+	android:paddingTop="5dip"
+  	android:paddingRight="10dip"
+  	android:paddingLeft="10dip"
+  	android:paddingBottom="10dip">
+  	
+    <TextView 
+		android:text="@string/LABEL_MODIFY_WORD" 
+		android:textSize="25sp" 
+		android:gravity="center_horizontal"
+		android:textColor="#ffffff" 
+		android:layout_height="wrap_content" 
+		android:layout_width="match_parent" 
+		android:id="@+id/modifyWordTitleText">
+	</TextView>
+	
+     <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dip"
+  			android:paddingRight="20dip"
+  			android:paddingLeft="20dip">
+			
+			<LinearLayout  
+			    android:id="@+id/modifyWordLinearLayout2" 
+			    android:layout_height="wrap_content" 
+			    android:layout_width="match_parent"
+			    android:orientation="vertical">
+				
+			    <LinearLayout
+			    android:layout_height="wrap_content" 
+			    android:layout_width="match_parent"
+			    android:orientation="horizontal">
+			    
+				<TextView 
+				    android:text="@string/LABEL_WORD" 
+				    android:layout_height="wrap_content" 
+				    android:textColor="#000000" 
+				    android:layout_width="wrap_content" 
+				    android:id="@+id/ModifyWordWordText">
+				</TextView>
+				<TextView 
+				    android:text="@string/LABEL_WORD" 
+				    android:layout_height="wrap_content" 
+				    android:textColor="#000000" 
+				    android:layout_width="wrap_content" 
+				    android:id="@+id/ModifyWordWordTextLang">
+				</TextView>
+				
+				</LinearLayout>
+				
+				<EditText 
+				    android:inputType="text" 
+				    android:layout_height="wrap_content" 
+				    android:layout_width="match_parent" 
+				    android:id="@+id/ModifyWordWordEditText"
+				    android:layout_marginTop="5dip">
+				</EditText>
+				
+			</LinearLayout>
+			
+			<LinearLayout
+			    android:layout_height="wrap_content" 
+			    android:layout_width="match_parent"
+			    android:orientation="horizontal">
+				
+				<TextView 
+				    android:text="@string/LABEL_ENTRY" 
+				    android:textColor="#000000" 
+				    android:layout_width="wrap_content" 
+				    android:layout_height="wrap_content" 
+				    android:id="@+id/ModifyWordEntryText"
+				    android:layout_marginTop="8dip">
+				</TextView>
+				<TextView 
+				    android:text="@string/LABEL_ENTRY" 
+				    android:textColor="#000000" 
+				    android:layout_width="wrap_content" 
+				    android:layout_height="wrap_content" 
+				    android:id="@+id/ModifyWordEntryTextLang"
+				    android:layout_marginTop="8dip">
+				</TextView>
+			
+			</LinearLayout>
+			
+			<EditText 
+			    android:layout_height="wrap_content" 
+			    android:layout_width="match_parent" 
+			    android:inputType="text" 
+			    android:id="@+id/ModifyWordEntryEditText"
+			    android:layout_marginTop="5dip">
+			</EditText>
+			
+			<LinearLayout 
+			    android:layout_height="wrap_content" 
+			    android:layout_width="match_parent" 
+			    android:id="@+id/modifyWordLinearLayout3" 
+			    android:gravity="center"
+			    android:layout_marginTop="10dip">
+				
+				<Button 
+				    android:layout_height="wrap_content" 
+				    android:layout_width="wrap_content"
+				    android:text="@string/LABEL_CONFIRM_MODIFICATION"
+				    android:id="@+id/ModifyWordConfirmButton">
+				</Button>
+				
+				<Button 
+				    android:layout_height="wrap_content" 
+				    android:text="@string/LABEL_CANCEL" 
+				    android:layout_width="match_parent" 
+				    android:id="@+id/ModifyWordCancelButton">
+				</Button>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

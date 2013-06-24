@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" 
+  android:orientation="vertical"
+  android:paddingTop="5dip"
+  android:paddingBottom="5dip">
+    <TextView 
+    	android:text="" 
+    	android:layout_width="wrap_content" 
+    	android:id="@+id/dictionaryItemName" 
+    	android:layout_height="wrap_content"
+    	style="@android:style/TextAppearance.Large"
+    	android:textSize="16sp"
+    	android:textColor="#000000"
+    >
+    </TextView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/dictionaryListItemLinearLayout1">
+        <TextView 
+        	android:text=""
+        	android:layout_width="wrap_content"
+        	android:id="@+id/dictionaryItemLanguageFrom"
+        	android:layout_height="wrap_content"
+        	style="@android:style/TextAppearance.Small"
+        	android:textSize="14sp"
+	        android:textColor="#504747" >
+	    </TextView>
+        <TextView android:text="@string/ARROW" 
+        	android:id="@+id/dictionaryItemSeparatorLanguages" 
+        	android:layout_width="wrap_content" 
+        	android:textColor="#000000"
+        	android:layout_height="wrap_content">
+        </TextView>
+        <TextView 
+        	android:text=""
+        	android:id="@+id/dictionaryItemLanguageTo" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content"
+        	style="@android:style/TextAppearance.Small"
+        	android:textSize="14sp"
+	        android:textColor="#504747" >
+        	
+        </TextView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:orientation="vertical"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:background="@drawable/bgbook"
+     android:paddingTop="5dip"
+  	 android:paddingRight="10dip"
+  	 android:paddingLeft="10dip"
+  	 android:paddingBottom="10dip">
+     
+     <TextView android:text="@string/LABEL_INSTALLED_DICTIONARIES" 
+     	android:textSize="25sp" 
+     	android:textColor="#ffffff" 
+     	android:layout_height="wrap_content" 
+     	android:layout_width="match_parent" 
+     	android:gravity="center_horizontal"
+     	android:id="@+id/dictionariesTitleText">
+     </TextView>
+     
+	<LinearLayout 
+    	android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:gravity="center"
+        android:weightSum="3"
+    >
+        <Button
+            android:id="@+id/dictionaryCreateDictionariesButton"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/LABEL_CREATE_DICTIONARY"
+            android:layout_weight="1" 
+            />
+        <Button 
+            android:id="@+id/dictionaryAddDictionaryButton"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/LABEL_DOWNLOAD_DICTIONARY"
+            android:layout_weight="1" 
+            />
+        <Button
+            android:id="@+id/dictionaryUpdateDictionariesButton"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/LABEL_DICTIONARY_UPDATE" 
+            android:layout_weight="1" 
+            />
+           	    
+     </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="5dip"
+  			android:paddingRight="20dip"
+  			android:paddingLeft="20dip"
+            android:orientation="vertical">
+            
+            	
+			    <ListView android:id="@+id/dictionariesDictionariesList"
+			    	android:layout_width="match_parent" 
+			    	android:layout_height="wrap_content"
+			    	android:layout_gravity="center_horizontal">
+			    </ListView>
+   		</LinearLayout>
+    
+</LinearLayout>
+

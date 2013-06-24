@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="match_parent"
+	android:background="@drawable/bgbook"
+	android:layout_height="match_parent" 
+	android:weightSum="1">
+	
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+			    <TextView 
+			        android:textColor="#000000" 
+			        android:textSize="18sp" 
+			        android:layout_marginLeft="20dip" 
+			        android:layout_marginTop="5dip" 
+			        android:layout_width="wrap_content" 
+			        android:layout_height="wrap_content" 
+			        android:text="@string/LABEL_LOGIN_SIGNUP" 
+			        android:id="@+id/UserLogInTitleText">
+			    </TextView>
+			    
+			    <TextView 
+			        android:textColor="#000000" 
+			        android:layout_marginTop="5dip" 
+			        android:layout_width="wrap_content" 
+			        android:layout_height="wrap_content" 
+			        android:text="@string/LABEL_YOUR_EMAIL_ADDRESS" 
+			        android:id="@+id/UserLogInYourEmailText">
+			    </TextView>
+			    
+			    <EditText 
+			        android:layout_width="match_parent" 
+			        android:layout_height="wrap_content" 
+			        android:inputType="textEmailAddress" 
+			        android:id="@+id/UserLogInEmailEditText">
+			        <requestFocus></requestFocus>
+			    </EditText>
+			    
+			    <TextView 
+			        android:textColor="#000000" 
+			        android:text="@string/LABEL_PASSWORD" 
+			        android:layout_width="wrap_content" 
+			        android:layout_height="wrap_content" 
+			        android:id="@+id/UserLogInPasswordText">
+			    </TextView>
+			    
+			    <EditText 
+			        android:layout_width="match_parent" 
+			        android:layout_height="wrap_content"
+			        android:inputType="textPassword" 
+			        android:id="@+id/UserLogInPasswordEditText">
+			    </EditText>
+			    
+			    <Button 
+			        android:layout_width="wrap_content" 
+			        android:text="@string/LABEL_LOGIN"
+			        android:layout_height="wrap_content" 
+			        android:id="@+id/UserLogInLogInButton">
+			    </Button>
+			    
+				<TextView 
+				    android:textColor="#000000" 
+				    android:layout_width="wrap_content" 
+				    android:text="@string/LABEL_NO_ACCOUNT" 
+				    android:layout_height="wrap_content" 
+				    android:id="@+id/UserLogInNoAccountText">
+				</TextView>
+				
+				<Button 
+				    android:layout_width="wrap_content" 
+				    android:text="@string/LABEL_SIGN_UP" 
+				    android:layout_height="wrap_content" 
+				    android:id="@+id/UserLogInSignUpButton">
+				</Button>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    >
+    
+    <LinearLayout 
+    	android:id="@+id/mainLinearLayout1" 
+    	android:layout_height="wrap_content" 
+    	android:layout_width="match_parent"
+    	android:paddingTop="5dip">
+           
+        	<TextView 
+        	    android:id="@+id/mainTextView1" 
+        	    android:textColor="#ffffff" 
+        	    android:textSize="25sp" 
+        	    android:text="@string/MesMots" 
+        	    android:layout_width="match_parent" 
+        	    android:layout_height="wrap_content"
+        	    android:gravity="center_horizontal" >
+        	</TextView>
+        		
+    </LinearLayout>
+
+    
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+  
+    			
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical" 
+			    android:paddingTop="25dip"
+			    android:paddingBottom="20dip"
+			    android:paddingLeft="80dip"
+			    android:paddingRight="80dip">
+       	 		
+
+			    <Button
+			        android:id="@+id/mainLogInSignUpButton"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="right"
+			        android:clickable="false"
+			        android:text="@string/LABEL_LOGIN" >
+
+    			</Button>
+    		
+			    <Button
+    			    android:id="@+id/mainWordButton"
+    			    android:layout_width="match_parent"
+    		   	 	android:layout_height="wrap_content"
+    			    android:text="@string/LABEL_SEARCH_WORD" 
+    			    android:layout_gravity="center_horizontal">
+				</Button>
+				
+    			<Button
+    			    android:id="@+id/mainDictionariesButton"
+    			    android:layout_width="match_parent"
+    		   	 	android:layout_height="wrap_content"
+    			    android:text="@string/LABEL_DICTIONARIES" 
+    			    android:layout_gravity="center_horizontal">
+				</Button>
+    			
+    			<Button
+    			    android:id="@+id/mainSynchronizeButton"
+    			    android:layout_width="match_parent"
+    			    android:layout_height="wrap_content"
+    			    android:layout_gravity="center_horizontal"
+    			    android:clickable="false"
+    			    android:text="@string/LABEL_SYNCHRONIZE" >
+
+    			</Button>
+    		
+    			<Button
+    			    android:id="@+id/mainWordDebateButton"
+    			    android:layout_width="match_parent"
+    			    android:layout_height="wrap_content"
+    			    android:layout_gravity="center_horizontal"
+    			    android:clickable="false"
+    			    android:text="@string/LABEL_WORD_DEBATE" >
+
+    			</Button>
+    			
+    			<Button 
+    			    android:layout_height="wrap_content" 
+    			    android:layout_width="match_parent" 
+    			    android:id="@+id/mainSettingsButton" 
+    			    android:text="@string/LABEL_SETTINGS_LANGUAGE"
+    			    android:layout_gravity="center_horizontal">
+    			</Button>
+    		
+    	</LinearLayout>
+    </ScrollView>
+</LinearLayout>

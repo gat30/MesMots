@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bgbook">
+    
+    <LinearLayout 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent" 
+        android:id="@+id/synchronizeSuggestonLinearLayout2">
+        
+        <TextView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:id="@+id/synchronizeSuggestionTitle" 
+            android:layout_marginLeft="20dip" 
+            android:layout_marginTop="5dip" 
+            android:textColor="#000000" 
+            android:textSize="18sp" 
+            android:text="@string/LABEL_SYNCHRONIZE" 
+            android:layout_marginBottom="10dip">
+        </TextView>
+        
+    </LinearLayout>
+    
+    <Button 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="@string/LABEL_SYNCHRONIZE" 
+        android:id="@+id/suggestionSynchronizeButton" 
+        android:layout_gravity="center">
+    </Button>
+    
+    <LinearLayout 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent" 
+        android:id="@+id/synchronizeLinearLayout1">
+        
+        <ListView 
+            android:layout_height="wrap_content" 
+            android:layout_width="match_parent" 
+            android:id="@+id/synchronizeSuggestionList">
+        </ListView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,31 @@
+
+<LinearLayout 
+	android:id="@+id/searchWordBackgroundLayout" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:padding="5dip"
+	>
+    
+    <TextView 
+    	android:text="" 
+    	android:id="@+id/headwordTopText" 
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content"
+    	style="@android:style/TextAppearance.Large"
+    	android:textColor="?android:textColorPrimary"
+    	>
+    </TextView>
+    
+    <TextView 
+    	android:text="" 
+    	android:layout_width="wrap_content" 
+    	android:id="@+id/headwordBottomText" 
+    	android:layout_height="wrap_content"
+    	style="@android:style/TextAppearance.Small"
+        android:singleLine="true"
+        android:textColor="?android:textColorSecondary"
+    	>
+    	</TextView>
+</LinearLayout>
