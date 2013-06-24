@@ -8,19 +8,21 @@ import android.widget.ArrayAdapter;
 
 /**
  * 
- * Extension of Android ArrayAdaper adding the addAll() functionality not already 
- * available in API 2.2. If moving the project to a more recent API just remove this class.
+ * Extension of Android ArrayAdaper adding the addAll() functionality not
+ * already available in API 2.2. If moving the project to a more recent API just
+ * remove this class.
  * 
  * @author Julien Wollscheid | July
- *
- * @param <T> The data type to adapt.
+ * 
+ * @param <T>
+ *            The data type to adapt.
  */
 public abstract class ArrayAdapterExtension<T> extends ArrayAdapter<T> {
 
 	/*
 	 * Redeclaring framework constructors.
 	 */
-	
+
 	public ArrayAdapterExtension(Context context, int resource,
 			int textViewResourceId, List<T> objects) {
 		super(context, resource, textViewResourceId, objects);
@@ -51,20 +53,20 @@ public abstract class ArrayAdapterExtension<T> extends ArrayAdapter<T> {
 	}
 
 	/**
-	 * Fill the adapter with the whole list in argument. Data will be appended 
+	 * Fill the adapter with the whole list in argument. Data will be appended
 	 * at the end of the data set.
 	 * 
-	 * @param newList The list to fill the adapter data with.
+	 * @param newList
+	 *            The list to fill the adapter data with.
 	 */
 	public void addAll(List<T> newList) {
-		
+
 		Iterator<T> it = newList.iterator();
-		
-		while ( it.hasNext() ) {
-			add( it.next() );
+
+		while (it.hasNext()) {
+			add(it.next());
 		}
-		
+
 	}
-	
-	
+
 }

@@ -8,16 +8,18 @@ public abstract class AbstractWord implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	private long id;
 	private String word;
 	private String entry;
 	private String phonetic;
 	private Dictionary dictionary;
-	
-	public AbstractWord() { }
-	
-	public AbstractWord(long id, String word, String entry, String phonetic,Dictionary dictionary) {
+
+	public AbstractWord() {
+	}
+
+	public AbstractWord(long id, String word, String entry, String phonetic,
+			Dictionary dictionary) {
 		super();
 		this.id = id;
 		this.word = word;
@@ -62,7 +64,7 @@ public abstract class AbstractWord implements Serializable {
 	public void setPhonetic(String phonetic) {
 		this.phonetic = phonetic;
 	}
-	
+
 	public Dictionary getDictionary() {
 		return dictionary;
 	}
@@ -70,7 +72,5 @@ public abstract class AbstractWord implements Serializable {
 	public void setDictionary(Dictionary dictionary) {
 		this.dictionary = dictionary;
 	}
-	
-	
-	
+
 }

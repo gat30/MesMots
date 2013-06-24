@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">MesMots</string>
     <string name="MesMots">MesMots</string>
-    
     <string name="country_prompt">Choose a language</string>
-        <string name="sign_up">Sign Up</string>
-        <string name="language_source">Language Source:</string>
-        <string name="language_destination">Language Destination:</string>
-        <string name="ok">OK</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="language_source">Language Source:</string>
+    <string name="language_destination">Language Destination:</string>
+    <string name="ok">OK</string>
+
 </resources>

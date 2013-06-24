@@ -2,96 +2,84 @@
 <resources>
 
     <string name="default_language">en</string>
-	<string name="LABEL_FIRST_NAME" >Nome</string>
-	<string name="LABEL_LAST_NAME" >Cognome</string>
-	<string name="LABEL_YOUR_EMAIL_ADDRESS" >Il mail</string>
-	<string name="LABEL_REENTER_EMAIL" >Confermare il mail</string>
-	<string name="LABEL_PASSWORD" >Password</string>
-	<string name="LABEL_PASSWORD_CONF" >Confermare il password</string>
-	<string name="LABEL_EMPTY_BLANK" >Campo vuoto per</string>
-	<string name="LABEL_UNCORRECT_ENTRY" >Informazione incoretta per</string>
-	<string name="LABEL_DIFFERENT_ADDRESSES" >I due mail sono diversi</string>
-	<string name="LABEL_DIFFERENT_PASSWORDS" >I due password sono diversi</string>
-	<string name="LABEL_NEW_PASSWORD">Nuovo password</string>
-	<string name="LABEL_NEW_PASSWORD_CONF">Confermare il nuovo password</string>
-	
-	<string name="LABEL_DICTIONARY_NAME">Dictionary name :</string>
-	<string name="LABEL_MONOLINGUAL_DICTIONARY">Monolingual dictionary</string>
-	<string name="LABEL_LANGUAGE" >Lingua</string>
-	
-	<string name="LABEL_SIGN_UP" >Segnarsi</string>
-	<string name="LABEL_DICTIONARIES" >I miei dizionari</string>
-	<string name="LABEL_ADD_WORD" >Aggiungere una parola</string>
-	<string name="LABEL_SEARCH_WORD" >Cercare una parola</string>
-	<string name="LABEL_SYNCHRONIZE" >Cambiare le mie parole</string>
-	<string name="LABEL_WORD_DEBATE" >Spazio di dibattito</string>
-	<string name="LABEL_DICTIONARY_UPDATE" >Aggiornamento dei miei dizionari</string>
-	<string name="LABEL_UPDATE" >Aggiornare</string>
-	<string name="LABEL_SETTINGS_LANGUAGE" >Lingua d\'interfaccia</string>
-	<string name="LABEL_LOGIN" >Connettersi</string>
-	<string name="LABEL_LOGIN_SIGNUP" >Connettersi / Segnarsi</string>
-	<string name="LABEL_NO_ACCOUNT" >Non ancora iscritto(a)</string>
-	<string name="LABEL_CREATE_DICTIONARY" >Creare un dizionario</string>
-	<string name="LABEL_DOWNLOAD_DICTIONARY" >Scaricare un dizionario</string>
-	<string name="LABEL_NEW_WORD" >Nuova parola</string>
-	<string name="LABEL_WORD" >Parola </string>
-	<string name="LABEL_NEW_ENTRY" >Nuova definizione</string>
-	<string name="LABEL_TRANSLATION" >Traduzione</string>
-	<string name="LABEL_ENTRY" >Definizione</string>
-	<string name="LABEL_MODIFY_WORD">Modificare una parola</string>
-		<string name="LABEL_CONFIRM_MODIFICATION">Confermare la modifica</string>
-	<string name="LABEL_DELETE_WORD">Sopprimere la questa parola</string>
-	<string name="LABEL_DELETE_DICTIONARY">Sopprimere il questo dizionario</string>
-	
-	<string name="LABEL_INSTALLED_DICTIONARIES" >Dizionari sistemati</string>
-	
-	<string name="LABEL_SEARCH" >Cercare</string>
-	<string name="LABEL_SEARCH_RESULTS" >Resultati della ricerca</string>
-	
-	<string name="LABEL_SUGGEST_MODIFICATION" >Suggerire una modifica</string>
+    <string name="LABEL_FIRST_NAME">Nome</string>
+    <string name="LABEL_LAST_NAME">Cognome</string>
+    <string name="LABEL_YOUR_EMAIL_ADDRESS">Il mail</string>
+    <string name="LABEL_REENTER_EMAIL">Confermare il mail</string>
+    <string name="LABEL_PASSWORD">Password</string>
+    <string name="LABEL_PASSWORD_CONF">Confermare il password</string>
+    <string name="LABEL_EMPTY_BLANK">Campo vuoto per</string>
+    <string name="LABEL_UNCORRECT_ENTRY">Informazione incoretta per</string>
+    <string name="LABEL_DIFFERENT_ADDRESSES">I due mail sono diversi</string>
+    <string name="LABEL_DIFFERENT_PASSWORDS">I due password sono diversi</string>
+    <string name="LABEL_NEW_PASSWORD">Nuovo password</string>
+    <string name="LABEL_NEW_PASSWORD_CONF">Confermare il nuovo password</string>
+    <string name="LABEL_DICTIONARY_NAME">Dictionary name :</string>
+    <string name="LABEL_MONOLINGUAL_DICTIONARY">Monolingual dictionary</string>
+    <string name="LABEL_LANGUAGE">Lingua</string>
+    <string name="LABEL_SIGN_UP">Segnarsi</string>
+    <string name="LABEL_DICTIONARIES">I miei dizionari</string>
+    <string name="LABEL_ADD_WORD">Aggiungere una parola</string>
+    <string name="LABEL_SEARCH_WORD">Cercare una parola</string>
+    <string name="LABEL_SYNCHRONIZE">Cambiare le mie parole</string>
+    <string name="LABEL_WORD_DEBATE">Spazio di dibattito</string>
+    <string name="LABEL_DICTIONARY_UPDATE">Aggiornamento dei miei dizionari</string>
+    <string name="LABEL_UPDATE">Aggiornare</string>
+    <string name="LABEL_SETTINGS_LANGUAGE">Lingua d\'interfaccia</string>
+    <string name="LABEL_LOGIN">Connettersi</string>
+    <string name="LABEL_LOGIN_SIGNUP">Connettersi / Segnarsi</string>
+    <string name="LABEL_NO_ACCOUNT">Non ancora iscritto(a)</string>
+    <string name="LABEL_CREATE_DICTIONARY">Creare un dizionario</string>
+    <string name="LABEL_DOWNLOAD_DICTIONARY">Scaricare un dizionario</string>
+    <string name="LABEL_NEW_WORD">Nuova parola</string>
+    <string name="LABEL_WORD">Parola </string>
+    <string name="LABEL_NEW_ENTRY">Nuova definizione</string>
+    <string name="LABEL_TRANSLATION">Traduzione</string>
+    <string name="LABEL_ENTRY">Definizione</string>
+    <string name="LABEL_MODIFY_WORD">Modificare una parola</string>
+    <string name="LABEL_CONFIRM_MODIFICATION">Confermare la modifica</string>
+    <string name="LABEL_DELETE_WORD">Sopprimere la questa parola</string>
+    <string name="LABEL_DELETE_DICTIONARY">Sopprimere il questo dizionario</string>
+    <string name="LABEL_INSTALLED_DICTIONARIES">Dizionari sistemati</string>
+    <string name="LABEL_SEARCH">Cercare</string>
+    <string name="LABEL_SEARCH_RESULTS">Resultati della ricerca</string>
+    <string name="LABEL_SUGGEST_MODIFICATION">Suggerire una modifica</string>
+    <string name="LABEL_OK">Ok</string>
+    <string name="LABEL_CANCEL">Cancellare</string>
+    <string name="LABEL_WELCOME">Benvenuto</string>
+    <string name="LABEL_MY_ACCOUNT">Il mio conto</string>
+    <string name="LABEL_SERVER_ERROR">Errore del server di dati</string>
+    <string name="LABEL_CONNEXION_IMPOSSIBLE">Errore : Connessione impossibile ! Verifichi la sua connessione internet</string>
+    <string name="LABEL_SERVICE_EXCEPTION">Errore : Servizio eccezione all\'indirezza 0x8a5f89. Crac Bim Badadoum Doppio Bang !</string>
+    <string name="LABEL_MISSING_PARAMETER">Parametro assente</string>
+    <string name="LABEL_UNDEFINED_FUNCTION">La funzione non esiste</string>
+    <string name="LABEL_UNKNOWN_FUNCTION">Funzione non conosciuta</string>
+    <string name="LABEL_FUNCTION_CALL_FAILED">Insuccesso dell\'appello della funzione</string>
+    <string name="LABEL_UNAUTHORIZED_ACCESS">Accesso non autorizzato</string>
+    <string name="LABEL_INTERNAL_SERVER_ERROR">Errore interna del server</string>
+    <string name="LABEL_WRONG_PARAMETER_TYPE">Errore nel tipo di parametro</string>
+    <string name="LABEL_DATABASE_ERROR">Errore della base di dati</string>
+    <string name="LABEL_YOU_ARE_CONNECTED">Sia ormai collegato(a) con il pseudo </string>
+    <string name="LABEL_YOU_ARE_NOT_CONNECTED">Non sia collegato(a) !</string>
+    <string name="LABEL_LOGOUT">Deconnessione</string>
+    <string name="LABEL_WRONG_PASSWORD">Password incorretto !</string>
+    <string name="LABEL_NO_PENDING_SUGGESTION">Non cambiamento di stato dall\'ultima sincronizzazione</string>
 
-	<string name="LABEL_OK" >Ok</string>
-	<string name="LABEL_CANCEL" >Cancellare</string>
-	<string name="LABEL_WELCOME" >Benvenuto</string>
-	<string name="LABEL_MY_ACCOUNT">Il mio conto</string>
-	
-	<string name="LABEL_SERVER_ERROR">Errore del server di dati</string>
-	<string name="LABEL_CONNEXION_IMPOSSIBLE">Errore : Connessione impossibile ! Verifichi la sua connessione internet</string>
-	<string name="LABEL_SERVICE_EXCEPTION">Errore : Servizio eccezione all\'indirezza 0x8a5f89. Crac Bim Badadoum Doppio Bang !</string>
-	<string name="LABEL_MISSING_PARAMETER">Parametro assente</string>
-	<string name="LABEL_UNDEFINED_FUNCTION">La funzione non esiste</string>
-	<string name="LABEL_UNKNOWN_FUNCTION">Funzione non conosciuta</string>
-	<string name="LABEL_FUNCTION_CALL_FAILED">Insuccesso dell\'appello della funzione</string>
-	<string name="LABEL_UNAUTHORIZED_ACCESS">Accesso non autorizzato</string>
-	<string name="LABEL_INTERNAL_SERVER_ERROR">Errore interna del server</string>
-	<string name="LABEL_WRONG_PARAMETER_TYPE">Errore nel tipo di parametro</string>
-	
-	<string name="LABEL_DATABASE_ERROR">Errore della base di dati</string>
-	
-	<string name="LABEL_YOU_ARE_CONNECTED">Sia ormai collegato(a) con il pseudo </string>
-	<string name="LABEL_YOU_ARE_NOT_CONNECTED">Non sia collegato(a) !</string>
-	
-	<string name="LABEL_LOGOUT">Deconnessione</string>
-	<string name="LABEL_WRONG_PASSWORD">Password incorretto !</string>
-	
-	<string name="LABEL_NO_PENDING_SUGGESTION">Non cambiamento di stato dall\'ultima sincronizzazione</string>
+    <string-array name="authorizedLanguages">
+        <item>en</item>
+        <item>es</item>
+        <item>fr</item>
+        <item>ga</item>
+        <item>it</item>
+    </string-array>
 
-	<string-array name='authorizedLanguages' >
-		<item>en</item>
-		<item>es</item>
-		<item>fr</item>
-		<item>ga</item>
-		<item>it</item>
-	</string-array>
-	
-	<string name="app_name">MesMots</string>
+    <string name="app_name">MesMots</string>
     <string name="MesMots">MesMots</string>
-    
     <string name="country_prompt">Scegliere una lingua</string>
-        <string name="sign_up">Inscrizione</string>
-        <string name="language_source">Lingua iniziale : </string>
-        <string name="language_destination">Lingua finale :</string>
-        <string name="ok">OK</string>
+    <string name="sign_up">Inscrizione</string>
+    <string name="language_source">Lingua iniziale : </string>
+    <string name="language_destination">Lingua finale :</string>
+    <string name="ok">OK</string>
+    <string name="ARROW"> => </string>
 
-        <string name="ARROW"> => </string>
 </resources>

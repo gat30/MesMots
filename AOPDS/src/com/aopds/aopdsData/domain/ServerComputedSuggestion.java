@@ -10,21 +10,17 @@ public class ServerComputedSuggestion extends Suggestion {
 	private User user;
 	private User admin;
 	private int serverId;
-	
-	public ServerComputedSuggestion() {}
 
-	
+	public ServerComputedSuggestion() {
+	}
+
 	public int getServerId() {
 		return serverId;
 	}
 
-
-
 	public void setServerId(int serverId) {
 		this.serverId = serverId;
 	}
-
-
 
 	public User getUser() {
 		return user;
@@ -44,10 +40,8 @@ public class ServerComputedSuggestion extends Suggestion {
 
 	@Override
 	public String toString() {
-		return "ServerComputedSuggestion [ " + super.toString() + ",  user=" + user + ", admin=" + admin
-				+ ", serverId=" + serverId + "]";
+		return "ServerComputedSuggestion [ " + super.toString() + ",  user="
+				+ user + ", admin=" + admin + ", serverId=" + serverId + "]";
 	}
-	
-	
-	
+
 }

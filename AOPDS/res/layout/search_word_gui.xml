@@ -1,101 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:background="@drawable/bgbook"
-  android:layout_height="match_parent" 
-  android:orientation="vertical"
-  android:paddingTop="5dip"
-  android:paddingRight="10dip"
-  android:paddingLeft="10dip"
-  android:paddingBottom="10dip">
-    
-    <TextView 
-    	android:layout_width="match_parent" 
-    	android:textSize="25sp"
-		android:textColor="#ffffff"
-    	android:layout_height="wrap_content"
-    	android:gravity="center_horizontal"
-    	android:id="@+id/searchDictionaryName">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgbook"
+    android:orientation="vertical"
+    android:paddingBottom="10dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="5dip" >
+
+    <TextView
+        android:id="@+id/searchDictionaryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="25sp" >
     </TextView>
-    
-    <LinearLayout 
-        android:id="@+id/searchLinearLayout3" 
-		android:layout_width="match_parent" 
-		android:orientation="vertical" 
-		android:layout_height="wrap_content"
-		android:paddingTop="20dip"
-  		android:paddingRight="20dip"
-  		android:paddingLeft="20dip"
-        >
-       	 	<TextView 
-		    	android:text="" 
-		    	android:id="@+id/searchDictionaryLanguages" 
-		    	android:layout_width="wrap_content" 
-		    	android:layout_height="wrap_content"
-			    android:textColor="#504747"
-			    android:textSize="14sp"
-			    android:layout_marginTop="5dip"
-			    android:layout_marginBottom="5dip">
-		    </TextView>
-		    
-		    <LinearLayout 
-		        android:id="@+id/searchLinearLayout2" 
-		        android:layout_width="match_parent" 
-		        android:orientation="vertical" 
-		        android:layout_height="match_parent">
-		        
-		        <LinearLayout 
-		            android:id="@+id/searchLinearLayout1" 
-		            android:layout_width="match_parent" 
-		            android:orientation="horizontal" 
-		            android:layout_height="wrap_content">
-		            
-		            <EditText 
-		                android:inputType="text"
-		                android:text="" 
-		                android:width="0px" 
-		                android:layout_width="wrap_content" 
-		                android:layout_weight="0.7" 
-		                android:id="@+id/wordToSearchEditText" 
-		                android:layout_height="wrap_content">
-		            </EditText>
-		            
-		            <Button 
-		                android:layout_width="wrap_content" 
-		                android:width="0px" 
-		                android:text="@string/LABEL_SEARCH" 
-		                android:layout_weight="0.3" 
-		                android:layout_height="wrap_content" 
-		                android:id="@+id/searchWordSearchButton">
-		            </Button>
-		        </LinearLayout>
-		        
-		        <Button 
-		            android:id="@+id/searchButtonAddWord" 
-		            android:layout_marginTop="10dip" 
-		            android:text="@string/LABEL_ADD_WORD" 
-		            android:layout_width="wrap_content" 
-		            android:layout_height="wrap_content">
-		        </Button>
-        
-    </LinearLayout>
-    
-        
-        <TextView android:text="@string/LABEL_SEARCH_RESULTS" 
-        	android:layout_width="wrap_content" 
-        	android:layout_height="wrap_content" 
-        	android:textAppearance="?android:attr/textAppearanceSmall"
-        	android:textColor="#000000" 
-        	android:id="@+id/searchWordResultsText">
+
+    <LinearLayout
+        android:id="@+id/searchLinearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="20dip" >
+
+        <TextView
+            android:id="@+id/searchDictionaryLanguages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:text=""
+            android:textColor="#504747"
+            android:textSize="14sp" >
         </TextView>
-        
-        <ListView android:id="@+id/searchResultsList" 
-        	android:layout_marginTop="5dip" 
-        	android:layout_width="match_parent" 
-        	android:layout_height="match_parent"
-        	android:background="@android:color/background_dark">
+
+        <LinearLayout
+            android:id="@+id/searchLinearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/searchLinearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/wordToSearchEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:inputType="text"
+                    android:text=""
+                    android:width="0px" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/searchWordSearchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="@string/LABEL_SEARCH"
+                    android:width="0px" >
+                </Button>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/searchButtonAddWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/LABEL_ADD_WORD" >
+            </Button>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/searchWordResultsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/LABEL_SEARCH_RESULTS"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000" >
+        </TextView>
+
+        <ListView
+            android:id="@+id/searchResultsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dip"
+            android:background="@android:color/background_dark" >
         </ListView>
-   
     </LinearLayout>
+
 </LinearLayout>

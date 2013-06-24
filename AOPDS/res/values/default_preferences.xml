@@ -1,79 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<string name="default_language">en</string>
-	<string name="LABEL_FIRST_NAME" >First name</string>
-	<string name="LABEL_LAST_NAME" >Last name</string>
-	<string name="LABEL_YOUR_EMAIL_ADDRESS" >Your e-mail address</string>
-	<string name="LABEL_REENTER_EMAIL" >Reenter your e-mail address</string>
-	<string name="LABEL_PASSWORD" >Password</string>
-	<string name="LABEL_PASSWORD_CONF" >Confirm password</string>
-	<string name="LABEL_EMPTY_BLANK" >Empty blank for </string>
-	<string name="LABEL_UNCORRECT_ENTRY" >Uncorrect entry for </string>
-	<string name="LABEL_DIFFERENT_ADDRESSES" >The two addresses are different</string>
-	<string name="LABEL_DIFFERENT_PASSWORDS" >The two passwords are different</string>
-	<string name="LABEL_NEW_PASSWORD">New password</string>
-	<string name="LABEL_NEW_PASSWORD_CONF">New password confirmation</string>
+    <string name="default_language">en</string>
+    <string name="LABEL_FIRST_NAME">First name</string>
+    <string name="LABEL_LAST_NAME">Last name</string>
+    <string name="LABEL_YOUR_EMAIL_ADDRESS">Your e-mail address</string>
+    <string name="LABEL_REENTER_EMAIL">Reenter your e-mail address</string>
+    <string name="LABEL_PASSWORD">Password</string>
+    <string name="LABEL_PASSWORD_CONF">Confirm password</string>
+    <string name="LABEL_EMPTY_BLANK">Empty blank for </string>
+    <string name="LABEL_UNCORRECT_ENTRY">Uncorrect entry for </string>
+    <string name="LABEL_DIFFERENT_ADDRESSES">The two addresses are different</string>
+    <string name="LABEL_DIFFERENT_PASSWORDS">The two passwords are different</string>
+    <string name="LABEL_NEW_PASSWORD">New password</string>
+    <string name="LABEL_NEW_PASSWORD_CONF">New password confirmation</string>
+    <string name="LABEL_DATABASE_ERROR">Database error</string>
+    <string name="LABEL_LANGUAGE">Language</string>
+    <string name="LABEL_SIGN_UP">Sign up</string>
+    <string name="LABEL_DICTIONARIES">My Dictionaries</string>
+    <string name="LABEL_SEARCH_WORD">Find a word</string>
+    <string name="LABEL_ADD_WORD">Add word</string>
+    <string name="LABEL_SYNCHRONIZE">Synchronize</string>
+    <string name="LABEL_WORD_DEBATE">Word debate</string>
+    <string name="LABEL_DICTIONARY_UPDATE">Update Dictionaries</string>
+    <string name="LABEL_UPDATE">Update</string>
+    <string name="LABEL_SETTINGS_LANGUAGE">Interface language</string>
+    <string name="LABEL_LOGIN">Log in</string>
+    <string name="LABEL_LOGIN_SIGNUP">Log in / Sign up</string>
+    <string name="LABEL_NO_ACCOUNT">No existing account ?</string>
+    <string name="LABEL_CREATE_DICTIONARY">Create a dictionary</string>
+    <string name="LABEL_DOWNLOAD_DICTIONARY">Download a dictionary</string>
+    <string name="LABEL_NEW_WORD">New word</string>
+    <string name="LABEL_WORD">Word </string>
+    <string name="LABEL_NEW_ENTRY">New entry</string>
+    <string name="LABEL_TRANSLATION">Translation</string>
+    <string name="LABEL_ENTRY">Entry</string>
+    <string name="LABEL_MODIFY_WORD">Modify a word</string>
+    <string name="LABEL_CONFIRM_MODIFICATION">Confirm modification</string>
+    <string name="LABEL_DELETE_WORD">Delete this word</string>
+    <string name="LABEL_DELETE_DICTIONARY">Delete this dictionary</string>
+    <string name="LABEL_INSTALLED_DICTIONARIES">Installed dictionaries</string>
+    <string name="LABEL_SEARCH">Search</string>
+    <string name="LABEL_SEARCH_RESULTS">Search Results :</string>
+    <string name="LABEL_SUGGEST_MODIFICATION">Suggest modification</string>
+    <string name="LABEL_OK">OK</string>
+    <string name="LABEL_CANCEL">Cancel</string>
+    <string name="LABEL_WELCOME">Welcome</string>
+    <string name="LABEL_MY_ACCOUNT">My Account</string>
+    <string name="LABEL_SERVER_ERROR">Server Error</string>
+    <string name="LABEL_CONNEXION_IMPOSSIBLE">Error : Connexion impossible ! Check your internet access.</string>
+    <string name="LABEL_SERVICE_EXCEPTION">Error : Service Exception at the address 0x8a5f89. Crac Bim Badadoum Double Bang !</string>
+    <string name="LABEL_MISSING_PARAMETER">Missing parameter !</string>
+    <string name="LABEL_UNDEFINED_FUNCTION">Undefined function !</string>
+    <string name="LABEL_UNKNOWN_FUNCTION">Unknown function !</string>
+    <string name="LABEL_FUNCTION_CALL_FAILED">Function call failed !</string>
+    <string name="LABEL_UNAUTHORIZED_ACCESS">Unauthorized access !</string>
+    <string name="LABEL_INTERNAL_SERVER_ERROR">Internal Server Error !</string>
+    <string name="LABEL_WRONG_PARAMETER_TYPE">Wrong parameter type !</string>
+    <string name="LABEL_YOU_ARE_CONNECTED">You are now connected as</string>
+    <string name="LABEL_YOU_ARE_NOT_CONNECTED">You are not connected !</string>
+    <string name="LABEL_LOGOUT">Logout</string>
+    <string name="LABEL_WRONG_PASSWORD">Your password is incorrect!</string>
+    <string name="LABEL_NO_PENDING_SUGGESTION">The state of your previous synchronized suggestions didn\'t change</string>
+    <string name="ARROW"> => </string>
 
-	<string name="LABEL_DATABASE_ERROR">Database error</string>
-	
-	<string name="LABEL_LANGUAGE" >Language</string>
-	
-	<string name="LABEL_SIGN_UP" >Sign up</string>
-	<string name="LABEL_DICTIONARIES" >My Dictionaries</string>
-	<string name="LABEL_SEARCH_WORD" >Find a word</string>
-	<string name="LABEL_ADD_WORD" >Add word</string>
-	<string name="LABEL_SYNCHRONIZE" >Synchronize</string>
-	<string name="LABEL_WORD_DEBATE" >Word debate</string>
-	<string name="LABEL_DICTIONARY_UPDATE" >Update Dictionaries</string>
-	<string name="LABEL_UPDATE" >Update</string>
-	<string name="LABEL_SETTINGS_LANGUAGE" >Interface language</string>
-	<string name="LABEL_LOGIN" >Log in</string>
-	<string name="LABEL_LOGIN_SIGNUP" >Log in / Sign up</string>
-	<string name="LABEL_NO_ACCOUNT" >No existing account ?</string>
-	<string name="LABEL_CREATE_DICTIONARY" >Create a dictionary</string>
-	<string name="LABEL_DOWNLOAD_DICTIONARY" >Download a dictionary</string>
-	<string name="LABEL_NEW_WORD" >New word</string>
-	<string name="LABEL_WORD" >Word </string>
-	<string name="LABEL_NEW_ENTRY" >New entry</string>
-	<string name="LABEL_TRANSLATION" >Translation</string>
-	<string name="LABEL_ENTRY" >Entry</string>
-	<string name="LABEL_MODIFY_WORD">Modify a word</string>
-	<string name="LABEL_CONFIRM_MODIFICATION">Confirm modification</string>
-	<string name="LABEL_DELETE_WORD">Delete this word</string>
-	<string name="LABEL_DELETE_DICTIONARY">Delete this dictionary</string>
-	
-	<string name="LABEL_INSTALLED_DICTIONARIES" >Installed dictionaries</string>
-	
-	<string name="LABEL_SEARCH" >Search</string>
-	<string name="LABEL_SEARCH_RESULTS" >Search Results :</string>
-	
-	<string name="LABEL_SUGGEST_MODIFICATION" >Suggest modification</string>
-	
-	<string name="LABEL_OK" >OK</string>
-	<string name="LABEL_CANCEL" >Cancel</string>
-	<string name="LABEL_WELCOME" >Welcome</string>
-	<string name="LABEL_MY_ACCOUNT">My Account</string>
-	
-	<string name="LABEL_SERVER_ERROR">Server Error</string>
-	<string name="LABEL_CONNEXION_IMPOSSIBLE">Error : Connexion impossible ! Check your internet access.</string>
-	<string name="LABEL_SERVICE_EXCEPTION">Error : Service Exception at the address 0x8a5f89. Crac Bim Badadoum Double Bang !</string>
-	<string name="LABEL_MISSING_PARAMETER">Missing parameter !</string>
-	<string name="LABEL_UNDEFINED_FUNCTION">Undefined function !</string>
-	<string name="LABEL_UNKNOWN_FUNCTION">Unknown function !</string>
-	<string name="LABEL_FUNCTION_CALL_FAILED">Function call failed !</string>
-	<string name="LABEL_UNAUTHORIZED_ACCESS">Unauthorized access !</string>
-	<string name="LABEL_INTERNAL_SERVER_ERROR">Internal Server Error !</string>
-	<string name="LABEL_WRONG_PARAMETER_TYPE">Wrong parameter type !</string>
-
-	<string name="LABEL_YOU_ARE_CONNECTED">You are now connected as</string>
-	<string name="LABEL_YOU_ARE_NOT_CONNECTED">You are not connected !</string>
-	
-	<string name="LABEL_LOGOUT">Logout</string>
-	<string name="LABEL_WRONG_PASSWORD">Your password is incorrect!</string>
-	
-	<string name="LABEL_NO_PENDING_SUGGESTION">The state of your previous synchronized suggestions didn\'t change</string>
-
-	<string name="ARROW"> => </string>
-	
 </resources>

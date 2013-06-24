@@ -1,31 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchWordBackgroundLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="5dip" >
 
-<LinearLayout 
-	android:id="@+id/searchWordBackgroundLayout" 
-	android:layout_width="fill_parent" 
-	android:layout_height="fill_parent" 
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
-	android:padding="5dip"
-	>
-    
-    <TextView 
-    	android:text="" 
-    	android:id="@+id/headwordTopText" 
-    	android:layout_width="wrap_content" 
-    	android:layout_height="wrap_content"
-    	style="@android:style/TextAppearance.Large"
-    	android:textColor="?android:textColorPrimary"
-    	>
+    <TextView
+        android:id="@+id/headwordTopText"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="?android:textColorPrimary" >
     </TextView>
-    
-    <TextView 
-    	android:text="" 
-    	android:layout_width="wrap_content" 
-    	android:id="@+id/headwordBottomText" 
-    	android:layout_height="wrap_content"
-    	style="@android:style/TextAppearance.Small"
+
+    <TextView
+        android:id="@+id/headwordBottomText"
+        style="@android:style/TextAppearance.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:singleLine="true"
-        android:textColor="?android:textColorSecondary"
-    	>
-    	</TextView>
+        android:text=""
+        android:textColor="?android:textColorSecondary" >
+    </TextView>
+
 </LinearLayout>

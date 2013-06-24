@@ -1,6 +1,6 @@
 package com.aopds.aopdsServiceClient.aopdsServiceException;
 
-public class AopdsServiceConnectionImpossibleException extends Exception{
+public class AopdsServiceConnectionImpossibleException extends Exception {
 
 	/**
 	 * 
@@ -18,6 +18,4 @@ public class AopdsServiceConnectionImpossibleException extends Exception{
 		// TODO Auto-generated constructor stub
 	}
 
-	
-	
 }

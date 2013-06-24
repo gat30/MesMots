@@ -1,58 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent" 
-  android:orientation="vertical" 
-  android:background="@drawable/bg"
-  >
-        
-    <TextView 
-       	android:gravity="top|center_horizontal"
-       	android:text="@string/LABEL_SETTINGS_LANGUAGE" 
-       	android:layout_width="match_parent" 
-       	android:layout_height="wrap_content" 
-       	android:id="@+id/preferencesTextViewTitle" 
-    	android:textColor="#ffffff"
-       	android:textSize="25sp"
-       	android:paddingTop="3dip">
-   	</TextView>
-    
-    <LinearLayout 
-        android:id="@+id/preferencesLinearLayout1" 
-        android:layout_width="match_parent" 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/preferencesTextViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center_horizontal"
+        android:paddingTop="3dip"
+        android:text="@string/LABEL_SETTINGS_LANGUAGE"
+        android:textColor="#ffffff"
+        android:textSize="25sp" >
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/preferencesLinearLayout1"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-		android:orientation="vertical"
-		android:paddingTop="20dip"
-		android:paddingBottom="20dip"
-		android:paddingLeft="80dip"
-		android:paddingRight="80dip">
-        
-        <TextView 
-        	   android:gravity="center_horizontal"
-    	       android:text="@string/country_prompt" 
-   	 	       android:layout_width="match_parent" 
-   	 	       android:layout_height="wrap_content"
-     	       android:textColor="#000000"
-     	       android:layout_marginTop="10dip"
-     	       android:textSize="18sp"
-     	       android:id="@+id/preferencesTextViewLanguage">
-    	</TextView>
-    	
-        <Spinner 
-            android:layout_width="match_parent" 
+        android:orientation="vertical"
+        android:paddingBottom="20dip"
+        android:paddingLeft="80dip"
+        android:paddingRight="80dip"
+        android:paddingTop="20dip" >
+
+        <TextView
+            android:id="@+id/preferencesTextViewLanguage"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dip"
-            android:id="@+id/preferencesLanguageSpinner" >
+            android:gravity="center_horizontal"
+            android:text="@string/country_prompt"
+            android:textColor="#000000"
+            android:textSize="18sp" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/preferencesLanguageSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip" >
         </Spinner>
-        
-        <Button 
-            android:id="@+id/preferencesConfirmButton" 
-            android:text="@string/LABEL_OK" 
-            android:layout_height="wrap_content" 
+
+        <Button
+            android:id="@+id/preferencesConfirmButton"
+            android:layout_width="90dip"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dip"
-            android:layout_width="90dip">
+            android:text="@string/LABEL_OK" >
         </Button>
     </LinearLayout>
+
 </LinearLayout>

@@ -8,39 +8,34 @@ public class Language implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	private int code;
 	private String abreviation;
 	private String name;
 	private String nameInEnglish;
-	
-	public Language(int code,
-					String abreviation,
-					String name,
-					String nameInEnglish) {
+
+	public Language(int code, String abreviation, String name,
+			String nameInEnglish) {
 		super();
 		this.code = code;
 		this.abreviation = abreviation;
 		this.name = name;
 		this.nameInEnglish = nameInEnglish;
 	}
-	
+
 	public Language(int code) {
 		super();
 		this.code = code;
 	}
-	
-	public Language() {}
 
-	
-	
+	public Language() {
+	}
+
 	@Override
 	public String toString() {
 		return "Language [code=" + code + ", abreviation=" + abreviation
 				+ ", name=" + name + ", nameInEnglish=" + nameInEnglish + "]";
 	}
-
-
 
 	public int getCode() {
 		return code;
@@ -73,8 +68,5 @@ public class Language implements Serializable {
 	public void setNameInEnglish(String nameInEnglish) {
 		this.nameInEnglish = nameInEnglish;
 	}
-	
-	
-	
-	
+
 }

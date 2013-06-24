@@ -1,241 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_height="match_parent" 
-    android:layout_width="match_parent" 
-    android:background="@drawable/bgbook">
-    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgbook"
+    android:orientation="vertical" >
+
     <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-    
-			    <TextView 
-			        android:layout_height="40dip" 
-			        android:id="@+id/SignUpActivityTitleTextView" 
-			        android:textColor="#000000" 
-			        android:text="@string/MesMots" 
-			        android:layout_width="100dip">
-			    </TextView>
-			    
-			    <TextView 
-			        android:visibility="gone" 
-			        android:layout_height="wrap_content" 
-			        android:id="@+id/SignUpActivityErrorTextView" 
-			        android:textColor="#FF0000" 
-			        android:text="" 
-			        android:layout_width="wrap_content" 
-			        android:layout_marginLeft="15dp" 
-			        android:layout_marginTop="2dp">
-			    </TextView>
-			    
-			    <LinearLayout 
-			        android:layout_height="wrap_content" 
-			        android:layout_width="match_parent" 
-			        android:id="@+id/SignUpActivityFirstNameLinearLayout">
-			        
-			        <TextView 
-			            android:textColor="#FF0000" 
-			            android:id="@+id/SignUpActivityStarFirstNameTextView" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="wrap_content" 
-			            android:text="*">
-			        </TextView>
-			        
-			        <TextView 
-			            android:text="@string/LABEL_FIRST_NAME" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="wrap_content" 
-			            android:id="@+id/SignUpActivityFirstNameTextView"
-			            android:layout_marginRight="5dp" 
-			            android:textColor="#000000">
-			        </TextView>
-			        
-			        <EditText 
-			            android:inputType="textPersonName"
-			            android:text="" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="match_parent" 
-			            android:id="@+id/SignUpActivityFirstNameEditText"
-			             android:textColor="#000000">
-			        </EditText>
-			        
-			    </LinearLayout>
-			    
-			    <LinearLayout 
-			        android:layout_height="wrap_content" 
-			        android:layout_width="match_parent" 
-			        android:id="@+id/SignUpActivityLastNameLinearLayout" 
-			        android:layout_marginBottom="10dip">
-			        
-			        <TextView 
-			            android:textColor="#FF0000" 
-			            android:id="@+id/SignUpActivityStarLastNameTextView" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="wrap_content" 
-			            android:text="*">
-			        </TextView>
-			        
-			        <TextView 
-			            android:text="@string/LABEL_LAST_NAME" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="wrap_content" 
-			            android:id="@+id/SignUpActivityLastNameTextView" 
-			            android:layout_marginRight="5dip" 
-			            android:textColor="#000000">
-			        </TextView>
-			        
-			        <EditText 
-			            android:inputType="textPersonName"
-			            android:text="" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="match_parent" 
-			            android:id="@+id/SignUpActivityLastNameEditText" 
-			            android:textColor="#000000">
-			        </EditText>
-			        
-			    </LinearLayout>
-			    
-			    <LinearLayout 
-			        android:layout_width="match_parent" 
-			        android:id="@+id/SignUpActivityEmailLinearLayout" 
-			        android:layout_height="wrap_content">
-			        
-			        <TextView 
-			            android:textColor="#FF0000" 
-			            android:id="@+id/SignUpActivityStarEmailTextView" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="wrap_content" 
-			            android:text="*">
-			        </TextView>
-			        
-			        <TextView 
-			            android:textColor="#000000" 
-			            android:id="@+id/SignUpActivityEmailTextView" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="wrap_content" 
-			            android:text="@string/LABEL_YOUR_EMAIL_ADDRESS">
-			        </TextView>
-			        
-			    </LinearLayout>
-			    
-			    <EditText 
-			        android:text="" 
-			        android:layout_height="wrap_content" 
-			        android:layout_width="match_parent" 
-			        android:id="@+id/SignUpActivityEmailEditText" 
-			        android:layout_marginBottom="10dp" 
-			        android:textColor="#000000" 
-			        android:inputType="textEmailAddress">
-			    </EditText>
-			    
-			    <LinearLayout 
-			        android:layout_width="match_parent" 
-			        android:id="@+id/SignUpActivityEmailConfirmLinearLayout" 
-			        android:layout_height="wrap_content">
-			        
-			        <TextView 
-			            android:textColor="#FF0000" 
-			            android:id="@+id/SignUpActivityStarEmailConfirmTextView" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="wrap_content" 
-			            android:text="*">
-			        </TextView>
-			        
-			        <TextView 
-			            android:textColor="#000000" 
-			            android:id="@+id/SignUpActivityEmailConfirmTextView" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="wrap_content" 
-			            android:text="@string/LABEL_REENTER_EMAIL">
-			        </TextView>
-			    </LinearLayout>
-			    
-			    <EditText 
-			        android:text="" 
-			        android:layout_height="wrap_content" 
-			        android:layout_width="match_parent" 
-			        android:id="@+id/SignUpActivityEmailConfirmEditText" 
-			        android:layout_marginBottom="10dp" 
-			        android:textColor="#000000" 
-			        android:inputType="textEmailAddress">
-			    </EditText>
-			    
-			    <LinearLayout 
-			        android:layout_height="wrap_content" 
-			        android:layout_width="match_parent" 
-			        android:id="@+id/SignUpActivityPasswordLinearLayout">
-			        
-			        <TextView 
-			            android:textColor="#FF0000" 
-			            android:id="@+id/SignUpActivityStarPasswordTextView" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="wrap_content" 
-			            android:text="*">
-			        </TextView>
-			        
-			        <TextView 
-			            android:text="@string/LABEL_PASSWORD" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="wrap_content" 
-			            android:id="@+id/SignUpActivityPasswordTextView" 
-			            android:layout_marginRight="5dp" 
-			            android:textColor="#000000">
-			        </TextView>
-			    </LinearLayout>
-			    
-			    <EditText 
-			        android:inputType="textPassword" 
-			        android:text="" 
-			        android:layout_height="wrap_content" 
-			        android:layout_width="match_parent" 
-			        android:id="@+id/SignUpActivityPasswordEditText" 
-			        android:textColor="#000000">
-			    </EditText>
-			    
-				<LinearLayout 
-				    android:layout_height="wrap_content" 
-				    android:layout_width="match_parent" 
-				    android:id="@+id/SignUpActivityPasswordConfirmLinearLayout">
-			        
-			        <TextView 
-			            android:textColor="#FF0000" 
-			            android:id="@+id/SignUpActivityStarPasswordConfirmTextView" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="wrap_content"
-			            android:text="*">
-			        </TextView>
-			        
-			        <TextView 
-			            android:text="@string/LABEL_PASSWORD_CONF" 
-			            android:layout_height="wrap_content" 
-			            android:layout_width="wrap_content" 
-			            android:id="@+id/SignUpActivityPasswordConfirmTextView" 
-			            android:layout_marginRight="5dp" 
-			            android:textColor="#000000">
-			        </TextView>
-			   	</LinearLayout>
-			   	
-			   	<EditText 
-			   	    android:inputType="textPassword" 
-			   	    android:text="" 
-			   	    android:layout_height="wrap_content" 
-			   	    android:layout_width="match_parent" 
-			   	    android:id="@+id/SignUpActivityPasswordConfirmEditText" 
-			   	    android:textColor="#000000">
-			   	</EditText>
-			   	
-			    <Button 
-			        android:layout_height="wrap_content" 
-			        android:id="@+id/SignUpActivitySignUpButton" 
-			        android:layout_gravity="center" 
-			        android:text="@string/LABEL_SIGN_UP" 
-			        android:layout_width="126dp">
-			    </Button>
-		</LinearLayout>
-	</ScrollView>	      
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/SignUpActivityTitleTextView"
+                android:layout_width="100dip"
+                android:layout_height="40dip"
+                android:text="@string/MesMots"
+                android:textColor="#000000" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/SignUpActivityErrorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:text=""
+                android:textColor="#FF0000"
+                android:visibility="gone" >
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/SignUpActivityFirstNameLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/SignUpActivityStarFirstNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="#FF0000" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/SignUpActivityFirstNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/LABEL_FIRST_NAME"
+                    android:textColor="#000000" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/SignUpActivityFirstNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    android:textColor="#000000" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/SignUpActivityLastNameLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip" >
+
+                <TextView
+                    android:id="@+id/SignUpActivityStarLastNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="#FF0000" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/SignUpActivityLastNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/LABEL_LAST_NAME"
+                    android:textColor="#000000" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/SignUpActivityLastNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    android:textColor="#000000" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/SignUpActivityEmailLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/SignUpActivityStarEmailTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="#FF0000" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/SignUpActivityEmailTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/LABEL_YOUR_EMAIL_ADDRESS"
+                    android:textColor="#000000" >
+                </TextView>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/SignUpActivityEmailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:inputType="textEmailAddress"
+                android:text=""
+                android:textColor="#000000" >
+            </EditText>
+
+            <LinearLayout
+                android:id="@+id/SignUpActivityEmailConfirmLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/SignUpActivityStarEmailConfirmTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="#FF0000" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/SignUpActivityEmailConfirmTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/LABEL_REENTER_EMAIL"
+                    android:textColor="#000000" >
+                </TextView>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/SignUpActivityEmailConfirmEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:inputType="textEmailAddress"
+                android:text=""
+                android:textColor="#000000" >
+            </EditText>
+
+            <LinearLayout
+                android:id="@+id/SignUpActivityPasswordLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/SignUpActivityStarPasswordTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="#FF0000" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/SignUpActivityPasswordTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/LABEL_PASSWORD"
+                    android:textColor="#000000" >
+                </TextView>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/SignUpActivityPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text=""
+                android:textColor="#000000" >
+            </EditText>
+
+            <LinearLayout
+                android:id="@+id/SignUpActivityPasswordConfirmLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/SignUpActivityStarPasswordConfirmTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="#FF0000" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/SignUpActivityPasswordConfirmTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/LABEL_PASSWORD_CONF"
+                    android:textColor="#000000" >
+                </TextView>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/SignUpActivityPasswordConfirmEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text=""
+                android:textColor="#000000" >
+            </EditText>
+
+            <Button
+                android:id="@+id/SignUpActivitySignUpButton"
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/LABEL_SIGN_UP" >
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

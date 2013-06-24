@@ -33,73 +33,69 @@ public class SeeWordActivity extends AopdsActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.see_word);
 
-		displayedWord = (AbstractWord) getIntent().getSerializableExtra("com.aopds.wordToShow");
+		displayedWord = (AbstractWord) getIntent().getSerializableExtra(
+				"com.aopds.wordToShow");
 
-		if ( displayedWord != null ) {
-			
-			if ( displayedWord.getDictionary() != null ) {
-				
+		if (displayedWord != null) {
+
+			if (displayedWord.getDictionary() != null) {
+
 				initGui();
-				
+
 			} else {
-				AopdsErrorHandler.handleError(new Exception(""), 0, this );
+				AopdsErrorHandler.handleError(new Exception(""), 0, this);
 				finish();
 			}
-			
+
 		} else {
-			AopdsErrorHandler.handleError(new Exception(""), 0, this );
+			AopdsErrorHandler.handleError(new Exception(""), 0, this);
 			finish();
 		}
 
-
 	}
 
-	
-	
 	@Override
 	protected void onRestart() {
 		super.onRestart();
-		
+
 		AbstractWord temp = null;
-		
-		if ( displayedWord instanceof Headword ) {
+
+		if (displayedWord instanceof Headword) {
 			try {
-				temp = AopdsDatabase.
-							getInstance(getApplicationContext()).
-								getWordById( displayedWord.getId() );
+				temp = AopdsDatabase.getInstance(getApplicationContext())
+						.getWordById(displayedWord.getId());
 			} catch (AopdsDatabaseException e) {
-				AopdsErrorHandler.handleError(e, AopdsErrorHandler.DATABASE_ERROR_DEFAULT, this);
+				AopdsErrorHandler.handleError(e,
+						AopdsErrorHandler.DATABASE_ERROR_DEFAULT, this);
 			}
 		} else {
-			
+
 			try {
-				temp = AopdsDatabase.
-							getInstance(getApplicationContext()).
-								getSuggestion( displayedWord.getId() );
+				temp = AopdsDatabase.getInstance(getApplicationContext())
+						.getSuggestion(displayedWord.getId());
 			} catch (AopdsDatabaseException e) {
-				AopdsErrorHandler.handleError(e, AopdsErrorHandler.DATABASE_ERROR_DEFAULT, this);
+				AopdsErrorHandler.handleError(e,
+						AopdsErrorHandler.DATABASE_ERROR_DEFAULT, this);
 			}
-			
+
 		}
-		
-		if ( temp != null ) {
+
+		if (temp != null) {
 			AopdsLogger.info("test", "stting new word");
-			temp.setDictionary( displayedWord.getDictionary() );
+			temp.setDictionary(displayedWord.getDictionary());
 			displayedWord = temp;
-			
+
 			TextView wordView = (TextView) findViewById(R.id.SeeWordWord);
 			TextView entryView = (TextView) findViewById(R.id.SeeWordEntry);
 
-			wordView.setText( displayedWord.getWord() );
-			entryView.setText( displayedWord.getEntry() );
-			
+			wordView.setText(displayedWord.getWord());
+			entryView.setText(displayedWord.getEntry());
+
 		}
-		
-		
-		
+
 	}
 
-	private void suggestDeletion(Suggestion s){
+	private void suggestDeletion(Suggestion s) {
 		AopdsDatabase db = AopdsDatabase.getInstance(getApplicationContext());
 		s.setIsDeleteActionType();
 		try {
@@ -110,73 +106,69 @@ public class SeeWordActivity extends AopdsActivity {
 		}
 	}
 
-	public void initGui()
-	{
+	public void initGui() {
 
-		
 		TextView wordView = (TextView) findViewById(R.id.SeeWordWord);
 		TextView entryView = (TextView) findViewById(R.id.SeeWordEntry);
 		TextView wordViewLang = (TextView) findViewById(R.id.SeeWordWordLang);
 		TextView entryViewLang = (TextView) findViewById(R.id.SeeWordEntryLang);
-		
-		
-		wordView.setText( displayedWord.getWord() );
-		entryView.setText( displayedWord.getEntry() );
-		wordViewLang.setText(" ("+displayedWord.getDictionary().getLanguageFrom().getName()+")");
-		entryViewLang.setText(" ("+displayedWord.getDictionary().getLanguageTo().getName()+")");
-		
-				
+
+		wordView.setText(displayedWord.getWord());
+		entryView.setText(displayedWord.getEntry());
+		wordViewLang.setText(" ("
+				+ displayedWord.getDictionary().getLanguageFrom().getName()
+				+ ")");
+		entryViewLang
+				.setText(" ("
+						+ displayedWord.getDictionary().getLanguageTo()
+								.getName() + ")");
+
 		View backgroundimage = findViewById(R.id.layoutLight);
 		Drawable background = backgroundimage.getBackground();
 		background.setAlpha(98);
-		
+
 		View backgroundimage1 = findViewById(R.id.layoutLight1);
 		Drawable background1 = backgroundimage1.getBackground();
 		background1.setAlpha(98);
-		
-	
+
 		Button buttonSuggest = (Button) findViewById(R.id.seeWordButtonSuggest);
 		buttonSuggest.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
 
-				Intent intent = new Intent(
-						getApplicationContext(),
-						ModifyWordActivity.class
-				);
+				Intent intent = new Intent(getApplicationContext(),
+						ModifyWordActivity.class);
 
 				intent.putExtra("com.aopds.wordToModify", displayedWord);
-				startActivity( intent );  
+				startActivity(intent);
 			}
 
 		});
-		
+
 		Button buttonDelete = (Button) findViewById(R.id.seeWordButtonDelete);
 		buttonDelete.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				
-				if (displayedWord instanceof Headword)
-				{
+
+				if (displayedWord instanceof Headword) {
 					Suggestion sugg = new Suggestion();
 					sugg.setIsDeleteActionType();
-					sugg.setHeadword((Headword)displayedWord);
+					sugg.setHeadword((Headword) displayedWord);
 					sugg.setDictionary(displayedWord.getDictionary());
 					sugg.setWord(displayedWord.getWord());
 					sugg.setEntry(displayedWord.getEntry());
 					sugg.setPhonetic(displayedWord.getPhonetic());
 					sugg.setPronunciationRecorded(null);
 					sugg.setSynchroStatus(Suggestion.SYNCHRO_STATUS_UNSYNCHRONIZED);
-					sugg.setDictionaryVersion(displayedWord.getDictionary().getVersion());			    	
+					sugg.setDictionaryVersion(displayedWord.getDictionary()
+							.getVersion());
 					suggestDeletion(sugg);
 					finish();
 				}
-				
+
 			}
 
 		});
 	}
-
-
 
 }

@@ -1,7 +1,5 @@
 <resources>
-    
-    <style name="AOPDSTheme" parent="android:Theme.Light.NoTitleBar">
-        
-    </style>
-    
+
+    <style name="AOPDSTheme" parent="android:Theme.Light.NoTitleBar"></style>
+
 </resources>

@@ -14,5 +14,5 @@ public class AopdsServiceException extends Exception {
 	public AopdsServiceException(String detailMessage) {
 		super(detailMessage);
 	}
-	
+
 }

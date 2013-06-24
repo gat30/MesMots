@@ -13,24 +13,24 @@ public class AopdsServiceServerException extends Exception {
 	public static final int UNAUTHORIZED_ACCESS = 5;
 	public static final int INTERNAL_SERVER_ERROR = 6;
 	public static final int WRONG_PARAMETER_TYPE = 7;
-		
+
 	private int serverCode;
 	private String serverMessage;
-	
+
 	public AopdsServiceServerException() {
 		super("The distant function throwed an exception. ");
 	}
 
 	@Override
 	public String getMessage() {
-		return super.getMessage() + " with the code '" + serverCode + 
-		"' and message '" + this.serverMessage + "'";
+		return super.getMessage() + " with the code '" + serverCode
+				+ "' and message '" + this.serverMessage + "'";
 	}
 
-	public void setMessage( String message ) {
+	public void setMessage(String message) {
 		this.serverMessage = message;
 	}
-	
+
 	public int getServerCode() {
 		return serverCode;
 	}
@@ -39,6 +39,4 @@ public class AopdsServiceServerException extends Exception {
 		this.serverCode = serverCode;
 	}
 
-	
-	
 }

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent" 
-  android:orientation="vertical"
-  android:background="@drawable/bgbook">
-  
-    <LinearLayout 
-        android:id="@+id/dictionaryUpdateLinearLayout1" 
-        android:layout_width="match_parent" 
-        android:layout_height="wrap_content">
-        
-        <Button 
-            android:id="@+id/dictionaryUpdateRefreshButton" 
-            android:layout_width="match_parent" 
-            android:layout_height="wrap_content" 
-            android:text="@string/LABEL_UPDATE">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgbook"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dictionaryUpdateLinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/dictionaryUpdateRefreshButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/LABEL_UPDATE" >
         </Button>
     </LinearLayout>
-    
-    <ListView 
-        android:layout_height="wrap_content" 
-        android:id="@+id/dictionaryUpdateDictionaryList" 
-        android:layout_width="match_parent">
+
+    <ListView
+        android:id="@+id/dictionaryUpdateDictionaryList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
     </ListView>
+
 </LinearLayout>

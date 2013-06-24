@@ -1,26 +1,23 @@
 package com.aopds.aopdsData.domain;
 
 public class User {
-	
- 	private long id;
+
+	private long id;
 	private String firstName;
- 	private String lastName;
- 	private String email;
- 	private String password;
+	private String lastName;
+	private String email;
+	private String password;
 
-	public User() {}
+	public User() {
+	}
 
-	public User( 	long id, String firstName, String lastName, 
-				  	String email)
-	{
+	public User(long id, String firstName, String lastName, String email) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 	}
-	
-	
-	
+
 	public long getId() {
 		return id;
 	}

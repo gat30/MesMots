@@ -8,21 +8,18 @@ public class Dictionary implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	private int code;
 	private Language languageTo;
 	private Language languageFrom;
 	private String name;
 	private int version;
-	
-	
-	public Dictionary() {}
 
-	public Dictionary(int code,
-					  Language languageTo,
-					  Language languageFrom, 
-					  String name,
-					  int version) {
+	public Dictionary() {
+	}
+
+	public Dictionary(int code, Language languageTo, Language languageFrom,
+			String name, int version) {
 		super();
 		this.code = code;
 		this.languageTo = languageTo;
@@ -77,7 +74,5 @@ public class Dictionary implements Serializable {
 	public void setVersion(int version) {
 		this.version = version;
 	}
-	
-	
-	
+
 }

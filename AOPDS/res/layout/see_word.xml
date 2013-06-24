@@ -1,147 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgbook"
+    android:orientation="vertical"
+    android:paddingBottom="10dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="5dip" >
 
-<LinearLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="match_parent"
-	android:background="@drawable/bgbook"
-	android:layout_height="match_parent" 
-	android:orientation="vertical"
-	android:paddingTop="5dip"
-  	android:paddingRight="10dip"
- 	android:paddingLeft="10dip"
-  	android:paddingBottom="10dip">
-
-    <TextView 
-	    android:layout_width="match_parent" 
-		android:text="@string/LABEL_WORD"
-		android:textSize="25sp"
-		android:textColor="#ffffff"
-		android:layout_height="wrap_content"
-		android:gravity="center_horizontal">
-	</TextView>
-    
-    <LinearLayout 
-        android:id="@+id/layoutLight" 
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/LABEL_WORD"
+        android:textColor="#ffffff"
+        android:textSize="25sp" >
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/layoutLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="@android:color/background_light"
         android:orientation="vertical"
-  		android:paddingRight="10dip"
-  		android:paddingLeft="10dip"
-  		android:background="@android:color/background_light"
-  		android:layout_marginTop="20dip"
-        >
-        
-        <LinearLayout 
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:orientation="horizontal"
-        >
-        
-        <TextView 
-		    android:layout_width="wrap_content" 
-			android:text="@string/LABEL_WORD"
-			android:textSize="15sp"
-			android:layout_height="wrap_content"
-			android:textStyle="italic">
-		</TextView>
-		
-        <TextView 
-            android:id="@+id/SeeWordWordLang" 
-		    android:layout_width="wrap_content" 
-			android:text=""
-			android:textSize="15sp"
-			android:layout_height="wrap_content"
-			android:textStyle="italic">
-		</TextView>
-		
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/LABEL_WORD"
+                android:textSize="15sp"
+                android:textStyle="italic" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/SeeWordWordLang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="15sp"
+                android:textStyle="italic" >
+            </TextView>
         </LinearLayout>
-        
-		<TextView 
-		    android:layout_width="match_parent" 
-			android:text=""
-			android:textColor="#000000" 
-			android:textSize="18sp"
-			android:gravity="center_horizontal"
-			android:layout_height="wrap_content" 
-			android:id="@+id/SeeWordWord"
-			android:layout_marginTop="5dip"
-			>
-			
-		</TextView>
-		
-		</LinearLayout>
-		
-     <LinearLayout 
-        android:id="@+id/layoutLight1" 
+
+        <TextView
+            android:id="@+id/SeeWordWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutLight1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@android:color/background_light"
         android:orientation="vertical"
-  		android:paddingRight="10dip"
-  		android:paddingLeft="10dip"
-  		android:background="@android:color/background_light"
-  		android:layout_marginTop="10dip"
-        >
-	
-          <LinearLayout 
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:orientation="horizontal"
-        >
-        
-		<TextView 
-		    android:layout_width="wrap_content" 
-			android:text="@string/LABEL_TRANSLATION"
-			android:textSize="15sp"
-			android:layout_height="wrap_content"
-			android:textStyle="italic">
-		</TextView>
-		
-		 <TextView 
-            android:id="@+id/SeeWordEntryLang" 
-		    android:layout_width="wrap_content" 
-			android:text=""
-			android:textSize="15sp"
-			android:layout_height="wrap_content"
-			android:textStyle="italic">
-		</TextView>
-		
-		 </LinearLayout>
-	
-		<TextView 
-		    android:id="@+id/SeeWordEntry" 
-		    android:text=""
-			android:textColor="#000000"
-			android:gravity="center_horizontal"
-			android:textSize="18sp"
-			android:layout_height="wrap_content"
-			android:layout_width="match_parent"
-			android:layout_marginTop="5dip">
-		</TextView>
-        
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/LABEL_TRANSLATION"
+                android:textSize="15sp"
+                android:textStyle="italic" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/SeeWordEntryLang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="15sp"
+                android:textStyle="italic" >
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/SeeWordEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="18sp" >
+        </TextView>
     </LinearLayout>
-    
-	<LinearLayout 
-	    android:layout_width="match_parent"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="20dip"
         android:gravity="center"
-	    >
-	    
-	    <Button 
-	    	android:layout_height="wrap_content"
-			android:text="@string/LABEL_SUGGEST_MODIFICATION"
-			android:layout_width="wrap_content" 
-			android:id="@+id/seeWordButtonSuggest">
-		</Button>
-		<Button 
-	    	android:layout_height="wrap_content"
-			android:text="@string/LABEL_DELETE_WORD"
-			android:layout_width="wrap_content" 
-			android:id="@+id/seeWordButtonDelete">
-		</Button>
-	    
-	</LinearLayout>
-	
+        android:orientation="horizontal"
+        android:paddingTop="20dip" >
+
+        <Button
+            android:id="@+id/seeWordButtonSuggest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/LABEL_SUGGEST_MODIFICATION" >
+        </Button>
+
+        <Button
+            android:id="@+id/seeWordButtonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/LABEL_DELETE_WORD" >
+        </Button>
+    </LinearLayout>
 
 </LinearLayout>

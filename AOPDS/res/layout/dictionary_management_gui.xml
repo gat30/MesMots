@@ -1,95 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
     android:background="@drawable/bgbook"
-    android:paddingTop="5dip"
-  	android:paddingRight="10dip"
-  	android:paddingLeft="10dip"
-  	android:paddingBottom="10dip">
-    
-    <TextView 
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text=""
-        android:textSize="25sp"
-        android:textColor="#ffffff"
-        android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="10dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="5dip" >
+
+    <TextView
         android:id="@+id/dictionaryManagementTitle"
-    />
-    
-    <ScrollView 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
-        
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
         <LinearLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:orientation="vertical"
-	        android:paddingTop="20dip"
-	  		android:paddingRight="20dip"
-	  		android:paddingLeft="20dip">
-	        
-	        <LinearLayout 
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:orientation="horizontal"
-		        android:paddingTop="5dip"
-		        android:paddingBottom="20dip">
-		        
-		        <TextView 
-		       	 	android:layout_height="wrap_content"
-		        	android:layout_width="match_parent"
-		        	android:text=""
-		        	android:textSize="18sp"
-		        	android:textColor="#000000"
-		        	android:gravity="center_horizontal"
-		        	android:id="@+id/dictionaryManagementLanguageInformation"
-		    	/>
-		    </LinearLayout>
-	        
-	        <Button
-		    	android:id="@+id/dictionaryManagementSeachWordButton"
-		    	android:layout_width="match_parent"
-		    	android:layout_height="wrap_content"
-		    	android:text="@string/LABEL_SEARCH_WORD" 
-		    	android:layout_gravity="center_horizontal"
-		    	android:layout_marginBottom="7dip">
-			</Button>
-		
-		    <Button
-		    	android:id="@+id/dictionaryManagementAddWordButton"
-		    	android:layout_width="match_parent"
-		    	android:layout_height="wrap_content"
-		    	android:text="@string/LABEL_ADD_WORD" 
-		    	android:layout_gravity="center_horizontal"
-		    	android:layout_marginBottom="7dip">
-			</Button>
-			
-		    <Button
-		    	android:id="@+id/dictionaryManagementUpdateButton"
-		    	android:layout_width="match_parent"
-		    	android:layout_height="wrap_content"
-		    	android:text="@string/LABEL_UPDATE" 
-		    	android:layout_gravity="center_horizontal"
-		    	android:layout_marginBottom="7dip">
-			</Button>
-	        
-		    <Button
-		    	android:id="@+id/dictionaryManagementDeleteButton"
-		    	android:layout_width="match_parent"
-		    	android:layout_height="wrap_content"
-		    	android:text="@string/LABEL_DELETE_DICTIONARY" 
-		    	android:layout_gravity="center_horizontal"
-		    	android:layout_marginBottom="7dip">
-			</Button>
-			
-	    </LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="20dip" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="20dip"
+                android:paddingTop="5dip" >
+
+                <TextView
+                    android:id="@+id/dictionaryManagementLanguageInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/dictionaryManagementSeachWordButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="7dip"
+                android:text="@string/LABEL_SEARCH_WORD" >
+            </Button>
+
+            <Button
+                android:id="@+id/dictionaryManagementAddWordButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="7dip"
+                android:text="@string/LABEL_ADD_WORD" >
+            </Button>
+
+            <Button
+                android:id="@+id/dictionaryManagementUpdateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="7dip"
+                android:text="@string/LABEL_UPDATE" >
+            </Button>
+
+            <Button
+                android:id="@+id/dictionaryManagementDeleteButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="7dip"
+                android:text="@string/LABEL_DELETE_DICTIONARY" >
+            </Button>
+        </LinearLayout>
     </ScrollView>
-	    
-	    
-	
+
 </LinearLayout>

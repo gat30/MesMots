@@ -1,93 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgbook"
-    android:paddingTop="5dip"
-  	android:paddingRight="10dip"
-  	android:paddingLeft="10dip"
-  	android:paddingBottom="10dip">
-    
-     <TextView 
-        android:layout_width="match_parent" 
-        android:text="@string/LABEL_CREATE_DICTIONARY" 
-        android:textColor="#ffffff" 
-        android:textSize="25sp"  
+    android:orientation="vertical"
+    android:paddingBottom="10dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="5dip" >
+
+    <TextView
+        android:id="@+id/CreateDictionary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_height="wrap_content" 
-        android:id="@+id/CreateDictionary">
-        </TextView>
-        
-    <LinearLayout 
-        android:id="@+id/horizontalLayout1"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
-    	android:paddingTop="20dip"
-        android:paddingLeft="5dip"
-        android:paddingRight="5dip">
-        
-     <TextView 
-         android:textSize="18sp"  
-    	android:layout_width="wrap_content" 
-    	android:textColor="#000000" 
-    	android:layout_height="wrap_content"
-    	android:text="@string/LABEL_DICTIONARY_NAME"
-    	android:id="@+id/dictionaryName">
+        android:text="@string/LABEL_CREATE_DICTIONARY"
+        android:textColor="#ffffff"
+        android:textSize="25sp" >
     </TextView>
-    
-      <EditText 
-       android:text=""
-       android:inputType="text" 
-       android:layout_width="match_parent"  
-       android:id="@+id/editTextDictionaryName" 
-       android:layout_height="wrap_content">
-    </EditText>
-    
-     </LinearLayout>
-     
-    <LinearLayout 
-        android:id="@+id/horizontalLayout2"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-    	android:layout_height="wrap_content">
-    
-    <CheckBox
-        android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-        android:id="@+id/CheckBoxMonolingual"
-    />
-    
-     <TextView 
-        android:textSize="18sp"  
-    	android:layout_width="wrap_content" 
-    	android:textColor="#000000" 
-    	android:layout_height="wrap_content"
-    	android:text="@string/LABEL_MONOLINGUAL_DICTIONARY">
-    </TextView> 
+
+    <LinearLayout
+        android:id="@+id/horizontalLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="20dip" >
+
+        <TextView
+            android:id="@+id/dictionaryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/LABEL_DICTIONARY_NAME"
+            android:textColor="#000000"
+            android:textSize="18sp" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/editTextDictionaryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="" >
+        </EditText>
     </LinearLayout>
-    
+
+    <LinearLayout
+        android:id="@+id/horizontalLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/CheckBoxMonolingual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/LABEL_MONOLINGUAL_DICTIONARY"
+            android:textColor="#000000"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+
     <Spinner
+        android:id="@+id/new_dictionary_language_from"
         android:layout_width="match_parent"
-   		android:layout_height="wrap_content"
-        android:id="@+id/new_dictionary_language_from" 
-    />
-    
+        android:layout_height="wrap_content" />
+
     <Spinner
+        android:id="@+id/new_dictionary_language_to"
         android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
-        android:id="@+id/new_dictionary_language_to" 
-        />
-    
-     <Button 
-       android:layout_width="105dip" 
-       android:text="@string/LABEL_OK" 
-       android:layout_height="wrap_content" 
-       android:layout_gravity="center_horizontal"
-       android:id="@+id/OkNewDictionaryButton">
-                
-   </Button>
-    
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/OkNewDictionaryButton"
+        android:layout_width="105dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/LABEL_OK" >
+    </Button>
 
 </LinearLayout>

@@ -22,78 +22,71 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
-
-
 public class DictionaryUpdateActivity extends AopdsActivity {
 
 	DictionaryListAdapter adapter;
 
 	/** Called when the activity is first created. */
-	public void onCreate(Bundle savedInstanceState) 
-	{
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		List<Dictionary> dl =  new ArrayList<Dictionary>();
+		List<Dictionary> dl = new ArrayList<Dictionary>();
 
-		adapter = new DictionaryListAdapter(getApplicationContext(), R.layout.dictionary_update_list_item, dl);
+		adapter = new DictionaryListAdapter(getApplicationContext(),
+				R.layout.dictionary_update_list_item, dl);
 		initGui();
 	}
 
-	public void onRefresh() 
-	{
+	public void onRefresh() {
 		AopdsServiceClient client = new AopdsServiceClient();
 
-		try 
-		{
+		try {
 			User guy = getUserManager().getUser();
-			if(guy!=null)
-			{
-				List<Dictionary> returnedList = client.getDictionaries(new AopdsServiceAuthorizationToken(Long.toString(guy.getId()), guy.getPassword()));
+			if (guy != null) {
+				List<Dictionary> returnedList = client
+						.getDictionaries(new AopdsServiceAuthorizationToken(
+								Long.toString(guy.getId()), guy.getPassword()));
 
-				if ( returnedList != null ) 
-				{
+				if (returnedList != null) {
 					adapter.clear();
-					adapter.addAll( returnedList );
+					adapter.addAll(returnedList);
 					adapter.notifyDataSetChanged();
 				}
-			}
-			else
-			{
-				AopdsLogger.info("DictionaryUpdateActivity", "No user connected");
+			} else {
+				AopdsLogger.info("DictionaryUpdateActivity",
+						"No user connected");
 				AlertDialog msgAlert = new AlertDialog.Builder(this).create();
-		    	msgAlert.setTitle("Not connected");
-		    	msgAlert.setMessage("You are not connected !");
-		    	msgAlert.setButton("OK", new DialogInterface.OnClickListener() 
-		    	{  
-		    	   public void onClick(DialogInterface dialog, int which) 
-		    	   {  
-		    		   dialog.cancel();
-		    	   } 
-		    	});
-		    	msgAlert.show();
+				msgAlert.setTitle("Not connected");
+				msgAlert.setMessage("You are not connected !");
+				msgAlert.setButton("OK", new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.cancel();
+					}
+				});
+				msgAlert.show();
 			}
-		} 
-		catch (AopdsServiceException e) {
-			AopdsErrorHandler.handleError(e, AopdsErrorHandler.SERVICE_ERROR_DEFAULT, this);
-		} 
-		catch (AopdsServiceServerException e) {
-			AopdsErrorHandler.handleError(e, AopdsErrorHandler.SERVICE_SERVER_ERROR_DEFAULT, this);
+		} catch (AopdsServiceException e) {
+			AopdsErrorHandler.handleError(e,
+					AopdsErrorHandler.SERVICE_ERROR_DEFAULT, this);
+		} catch (AopdsServiceServerException e) {
+			AopdsErrorHandler.handleError(e,
+					AopdsErrorHandler.SERVICE_SERVER_ERROR_DEFAULT, this);
+		} catch (AopdsServiceConnectionImpossibleException e) {
+			AopdsErrorHandler.handleError(e,
+					AopdsErrorHandler.CONNECTION_ERROR_DEFAULT, this);
 		}
-		catch (AopdsServiceConnectionImpossibleException e) {
-			AopdsErrorHandler.handleError(e, AopdsErrorHandler.CONNECTION_ERROR_DEFAULT, this);
-		}
-		
+
 	}
 
 	public void initGui() {
 
-		setContentView( R.layout.dictionary_update_gui );
+		setContentView(R.layout.dictionary_update_gui);
 
-		Button refreshButton = (Button) findViewById( R.id.dictionaryUpdateRefreshButton );
+		Button refreshButton = (Button) findViewById(R.id.dictionaryUpdateRefreshButton);
 
-		ListView dictionaryList = (ListView) findViewById( R.id.dictionaryUpdateDictionaryList );
+		ListView dictionaryList = (ListView) findViewById(R.id.dictionaryUpdateDictionaryList);
 
-		dictionaryList.setAdapter( adapter );
+		dictionaryList.setAdapter(adapter);
 
 		refreshButton.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
@@ -101,7 +94,7 @@ public class DictionaryUpdateActivity extends AopdsActivity {
 				onRefresh();
 
 			}
-		});  
+		});
 
 	}
 
