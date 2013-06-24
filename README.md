@@ -1,0 +1,4 @@
+MesMots
+=======
+
+Android Cooperative dictionary 
