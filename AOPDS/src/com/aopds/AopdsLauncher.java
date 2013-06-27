@@ -96,7 +96,6 @@ public class AopdsLauncher extends AopdsActivity {
 		Button searchWordButton = (Button) findViewById(R.id.mainWordButton);
 
 		Button logInSignUpButton = (Button) findViewById(R.id.mainLogInSignUpButton);
-
 		/*
 		 * if (getUserManager().isUserPersisted()){
 		 * logInSignUpButton.setText(getString(R.string.LABEL_MY_ACCOUNT)); }
@@ -104,7 +103,11 @@ public class AopdsLauncher extends AopdsActivity {
 
 		// Button addWordButton = (Button) findViewById(R.id.mainAddWordButton);
 		Button synchronizeButton = (Button) findViewById(R.id.mainSynchronizeButton);
-
+		Button forumButton = (Button) findViewById(R.id.mainWordDebateButton);
+		
+		logInSignUpButton.setVisibility(View.GONE);
+		synchronizeButton.setVisibility(View.GONE);
+		forumButton.setVisibility(View.GONE);
 		preferencesButton.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 

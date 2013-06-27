@@ -46,6 +46,13 @@ public class DictionaryManagementActivity extends AopdsActivity {
 				+ dictionary.getLanguageTo().getName());
 
 		Button searchWord = (Button) findViewById(R.id.dictionaryManagementSeachWordButton);
+		
+		Button updateDictionary = (Button) findViewById(R.id.dictionaryManagementUpdateButton);
+		Button deleteDictionary = (Button) findViewById(R.id.dictionaryManagementDeleteButton);
+		
+		updateDictionary.setVisibility(View.GONE);
+		deleteDictionary.setVisibility(View.GONE);
+		
 		searchWord.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {

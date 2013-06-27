@@ -13,11 +13,17 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.KeyEvent;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -51,7 +57,7 @@ public class SearchWordActivity extends AopdsActivity {
 		headwordListAdapter = new WordListAdapter(getApplicationContext(),
 				R.layout.search_word_list_item, new ArrayList<AbstractWord>(),
 				dictionary);
-
+		
 		initGUI();
 
 	}
@@ -67,7 +73,29 @@ public class SearchWordActivity extends AopdsActivity {
 		resultListView.setSelectionAfterHeaderView();
 
 	}
+	
+	public void onCreateContextMenu(ContextMenu menu, View v,
+	        ContextMenuInfo menuInfo) {
+	    super.onCreateContextMenu(menu, v, menuInfo);
+	    MenuInflater inflater = getMenuInflater();
+	    inflater.inflate(R.menu.long_click_menu, menu);
+	}
 
+	
+	
+	public boolean onContextItemSelected(MenuItem item) {
+	    AdapterContextMenuInfo info = (AdapterContextMenuInfo) item
+	            .getMenuInfo();
+	 
+	    switch (item.getItemId()) {
+	    case R.id.remove_item:
+	        Log.i("test", "test");
+	        return true;
+	    }
+	    return false;
+	}
+	
+	
 	public void initGUI() {
 
 		TextView dictionaryName = (TextView) findViewById(R.id.searchDictionaryName);
@@ -139,6 +167,15 @@ public class SearchWordActivity extends AopdsActivity {
 					}
 				});
 
+		resultListView.setOnItemLongClickListener( new AdapterView.OnItemLongClickListener 
+				(){ 
+            @Override 
+            public boolean onItemLongClick(AdapterView<?> av, View v, int pos, long id) { 
+            	Log.i( "test", "onLongListItemClick id=" + id );
+            	return false; 
+            	} 
+			}); 
+
 		TextView searchWordResultsText = (TextView) findViewById(R.id.searchWordResultsText);
 		searchWordResultsText.setVisibility(TextView.INVISIBLE);
 
@@ -209,6 +246,7 @@ public class SearchWordActivity extends AopdsActivity {
 
 		TextView searchWordResultsText = (TextView) findViewById(R.id.searchWordResultsText);
 		searchWordResultsText.setVisibility(TextView.VISIBLE);
+		registerForContextMenu(resultListView);///////////////////////////////////////////////////////////////a changer...
 
 	}
 

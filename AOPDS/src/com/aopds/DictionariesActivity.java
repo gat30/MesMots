@@ -62,11 +62,11 @@ public class DictionariesActivity extends AopdsActivity {
 			}
 		});
 
-		if (getIntent().getIntExtra("requestCode", 0) == TASK_SEARCH_WORD) {
+		//if (getIntent().getIntExtra("requestCode", 0) == TASK_SEARCH_WORD) {
 			createDictionaryButton.setVisibility(View.GONE);
 			addDictionaryButton.setVisibility(View.GONE);
 			supprDictionaryButton.setVisibility(View.GONE);
-		}
+		//}
 		try {
 
 			List<Dictionary> allDictionaries = db.getAllDictionaries();
