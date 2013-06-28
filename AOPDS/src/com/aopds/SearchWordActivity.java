@@ -311,7 +311,7 @@ public class SearchWordActivity extends AopdsActivity {
 
 		TextView searchWordResultsText = (TextView) findViewById(R.id.searchWordResultsText);
 		searchWordResultsText.setVisibility(TextView.VISIBLE);
-		registerForContextMenu(resultListView);///////////////////////////////////////////////////////////////a changer...
+		registerForContextMenu(resultListView);//////////////////////////////////////////////////////////////a changer...
 
 	}
 
