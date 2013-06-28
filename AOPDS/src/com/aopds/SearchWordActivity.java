@@ -6,6 +6,8 @@ import com.aopds.aopdsData.AopdsDatabase;
 import com.aopds.aopdsData.AopdsDataException.AopdsDatabaseException;
 import com.aopds.aopdsData.domain.AbstractWord;
 import com.aopds.aopdsData.domain.Dictionary;
+import com.aopds.aopdsData.domain.Headword;
+import com.aopds.aopdsData.domain.Suggestion;
 import com.aopds.guiAdapters.WordListAdapter;
 import com.aopds.tools.AopdsErrorHandler;
 import android.app.AlertDialog;
@@ -61,7 +63,59 @@ public class SearchWordActivity extends AopdsActivity {
 		initGUI();
 
 	}
+	
+	private void suggestDeletion(Suggestion s) {
+		AopdsDatabase db = AopdsDatabase.getInstance(getApplicationContext());
+		s.setIsDeleteActionType();
+		try {
+			db.addSuggestion(s);
+			} catch (AopdsDatabaseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void delete(int pos) {
 
+		AbstractWord w = (AbstractWord)resultListView.getAdapter().getItem(pos);
+		Log.i("selectedWord",w.toString());
+		w.setDictionary(dictionary);
+		
+		if (w instanceof Headword) {
+			
+			System.out.println("ok");
+			Suggestion sugg = new Suggestion();
+			sugg.setIsDeleteActionType();
+			sugg.setHeadword((Headword) w);
+			sugg.setDictionary(w.getDictionary());
+			sugg.setWord(w.getWord());
+			sugg.setEntry(w.getEntry());
+			sugg.setPhonetic(w.getPhonetic());
+			sugg.setPronunciationRecorded(null);
+			sugg.setSynchroStatus(Suggestion.SYNCHRO_STATUS_UNSYNCHRONIZED);
+			sugg.setDictionaryVersion(w.getDictionary()
+					.getVersion());
+			Log.i("suggestion",sugg.toString());
+			suggestDeletion(sugg);
+			
+		}
+
+	}
+	
+	public void modify(int pos) {
+		
+		AbstractWord w = (AbstractWord)resultListView.getAdapter().getItem(pos);
+		Log.i("selectedWord",w.toString());
+		w.setDictionary(dictionary);
+
+		Intent intent = new Intent(getApplicationContext(),
+				ModifyWordActivity.class);
+
+		intent.putExtra("com.aopds.wordToModify", w);
+		startActivity(intent);
+	}
+
+	
 	@Override
 	protected void onRestart() {
 		super.onRestart();
@@ -82,17 +136,25 @@ public class SearchWordActivity extends AopdsActivity {
 	}
 
 	
-	
-	public boolean onContextItemSelected(MenuItem item) {
+		public boolean onContextItemSelected(MenuItem item) {
 	    AdapterContextMenuInfo info = (AdapterContextMenuInfo) item
 	            .getMenuInfo();
-	 
+	    
+	    System.out.println(info.position);
 	    switch (item.getItemId()) {
-	    case R.id.remove_item:
-	        Log.i("test", "test");
-	        return true;
+	    
+	    case R.id.remove_item:delete(info.position);
+	    onSearchWord();
+	    return true;
+	    	    
+	    case R.id.modify_item:modify(info.position);
+	   return true;
+	    
+	    default:
+            return false;
+	    
 	    }
-	    return false;
+	    
 	}
 	
 	
@@ -171,7 +233,10 @@ public class SearchWordActivity extends AopdsActivity {
 				(){ 
             @Override 
             public boolean onItemLongClick(AdapterView<?> av, View v, int pos, long id) { 
-            	Log.i( "test", "onLongListItemClick id=" + id );
+            	System.out.println(pos);
+            	
+            	AbstractWord w = (AbstractWord) av.getItemAtPosition(pos);
+            	Log.i("selectedWord",w.toString());
             	return false; 
             	} 
 			}); 

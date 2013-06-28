@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:id="@+id/remove_item" android:title="Remove" />
+    <item android:id="@+id/modify_item" android:title="@string/LABEL_SUGGEST_MODIFICATION" />
+    <item android:id="@+id/remove_item" android:title="@string/LABEL_DELETE_WORD" />
+
 </menu>
